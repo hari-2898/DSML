@@ -1,0 +1,37 @@
+import numpy as np
+
+print("="*40 + "\nLOOPING & LISTS\n" + "="*40)
+
+for i in range(10):
+    print(i, end=" ")
+print("\n")
+
+fruits = ["apple", "banana", "mango", "orange"]
+for fruit in fruits:
+    print(fruit)
+
+fruits_input = "apple banana mango"  
+print("\nSplit fruits:", fruits_input.split())
+
+numbers = list(range(1, 8))
+print("\nOriginal Numbers:", numbers)
+
+square = []
+for i in numbers:
+    square.append(pow(i, 2))
+print("Squared Numbers:", square)
+
+========================================
+LOOPING & LISTS
+========================================
+0 1 2 3 4 5 6 7 8 9 
+
+apple
+banana
+mango
+orange
+
+Split fruits: ['apple', 'banana', 'mango']
+
+Original Numbers: [1, 2, 3, 4, 5, 6, 7]
+Squared Numbers: [1, 4, 9, 16, 25, 36, 49]
