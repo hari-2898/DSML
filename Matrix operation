@@ -1,0 +1,72 @@
+import numpy as np
+
+# ---------------------------------------------------------
+# Matrix Definition & Operations
+# ---------------------------------------------------------
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+B = np.array([[9, 8, 7], [6, 5, 4], [3, 2, 1]])
+
+print("Matrix A:\n", A)
+print("\nMatrix B:\n", B)
+
+# Addition
+add = A + B
+print("\nAddition of A and B:\n", add)
+
+# Subtraction (Fixed a tiny error in your notes where it said A - A - B)
+sub = A - B
+print("\nSubtraction of A and B:\n", sub)
+
+# Matrix Multiplication (Dot product)
+mul = np.dot(A, B)
+print("\nMultiplication of A and B:\n", mul)
+
+# Element-wise Multiplication
+element_mul = A * B
+print("\nElement-wise multiplication of A and B:\n", element_mul)
+
+# Transpose
+transpose_A = A.T
+print("\nTranspose of matrix A:\n", transpose_A)
+
+# Determinant
+det_A = np.linalg.det(A)
+print(f"\nDeterminant of matrix A: {det_A}")
+
+# Inverse with Error Handling
+try:
+    inv_A = np.linalg.inv(A)
+    print("\nInverse of Matrix A:\n", inv_A)
+except np.linalg.LinAlgError:
+    # A has a determinant of 0 (or near 0), so it is singular
+    print("\nMatrix A is singular, inverse does not exist")
+
+# ---------------------------------------------------------
+# Indexing & Slicing
+# ---------------------------------------------------------
+print("\n" + "="*40 + "\nINDEXING & SLICING\n" + "="*40)
+arr = np.array([10, 20, 30, 40, 50])
+
+print("First element:", arr[0])      # 10
+print("Last element:", arr[-1])       # 50 (Using negative indexing for safety)
+print("Slicing [1:4]:", arr[1:4])     # [20 30 40]
+
+# ---------------------------------------------------------
+# Mathematical Functions / Descriptive Statistics
+# ---------------------------------------------------------
+print("\n" + "="*40 + "\nDESCRIPTIVE STATISTICS\n" + "="*40)
+arr_stats = np.array([5, 8, 10, 16, 20, 22, 30])
+
+print("Sum:", np.sum(arr_stats))
+print("Mean:", np.mean(arr_stats))
+print("Min:", np.min(arr_stats))
+print("Max:", np.max(arr_stats))
+print("Std Dev:", np.std(arr_stats))
+
+# ---------------------------------------------------------
+# Reshaping Arrays
+# ---------------------------------------------------------
+print("\n" + "="*40 + "\nRESHAPING ARRAYS\n" + "="*40)
+arr1 = np.arange(1, 10) # Generates 1 to 9
+reshaped = arr1.reshape(3, 3)
+print("Reshaped Array (3x3):\n", reshaped)
