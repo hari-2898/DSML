@@ -1,0 +1,52 @@
+import numpy as np
+
+# ---------------------------------------------------------
+# Containers & Loops
+# ---------------------------------------------------------
+print("="*40 + "\nLOOPING & LISTS\n" + "="*40)
+
+# Loop example
+for i in range(10):
+    print(i, end=" ")
+print("\n")
+
+# Iterating over a list
+fruits = ["apple", "banana", "mango", "orange"]
+for fruit in fruits:
+    print(fruit)
+
+# String split example
+fruits_input = "apple banana mango"  # Simulating manual input
+print("\nSplit fruits:", fruits_input.split())
+
+# Generating squares using a loop
+numbers = list(range(1, 8))
+print("\nOriginal Numbers:", numbers)
+
+square = []
+for i in numbers:
+    square.append(pow(i, 2))
+print("Squared Numbers:", square)
+
+
+# ---------------------------------------------------------
+# NumPy Array Initialization Techniques
+# ---------------------------------------------------------
+print("\n" + "="*40 + "\nNUMPY BASICS\n" + "="*40)
+
+# Creating 1D and 2D arrays
+arr = np.array([2, 3, 4, 5])
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
+
+print("1D Array:", arr)
+print("\n2D Array:\n", arr2d)
+print("Type of arr2d:", type(arr2d))
+
+# Initializing arrays with default values
+print("\n3x3 Matrix filled with Zeros:\n", np.zeros((3, 3)))
+print("\n2x2 Matrix filled with Ones:\n", np.ones((2, 2)))
+print("\n3x3 Identity Matrix:\n", np.eye(3))
+
+# Sequence generation features
+print("\nnp.arange(1, 10, 2):", np.arange(1, 10, 2))
+print("np.linspace(0, 1, 5):", np.linspace(0, 1, 5))
