@@ -1,0 +1,17 @@
+import pandas as pd
+print("="*40 + "\nPANDAS SERIES\n" + "="*40)
+data_series = pd.Series([10, 20, 30, 40], index=['a', 'b', 'c', 'd'])
+print("Pandas Series:\n", data_series)
+print("\nValue at index 'b':", data_series['b'])
+
+========================================
+PANDAS SERIES
+========================================
+Pandas Series:
+ a    10
+b    20
+c    30
+d    40
+dtype: int64
+
+Value at index 'b': 20
