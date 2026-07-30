@@ -1,0 +1,9 @@
+from matplotlib import collections
+import matplotlib.pyplot as plt
+categories=['Apple','Banna','Cheries','Dates','Elder Berries']
+values=[10,24,36,18,12]
+plt.bar(categories,values,color='coral',edgecolor='black')
+plt.title('Fruit Sales')
+plt.xlabel('Fruit Types')
+plt.ylabel('Unit Sold')
+plt.show()
