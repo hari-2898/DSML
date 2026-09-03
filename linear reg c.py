@@ -23,3 +23,10 @@ print("y=", clf.intercept_, "+", clf.coef_, "* x")
 newvalue = float(input("enter the score:"))
 y_pred = clf.intercept_ + clf.coef_ * newvalue
 print(y_pred)
+
+output
+[[75.83333333]
+ [78.33333333]]
+y= [35.83333333] + [[0.5]] * x
+enter the score:80
+[[75.83333333]]
